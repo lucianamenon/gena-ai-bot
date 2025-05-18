@@ -629,26 +629,9 @@ class WhatsAppClient:
                 )
                 return
             
-            # Informar ao usuário que a transcrição está em andamento
-            self.send_text_message(
-                to=wa_id,
-                message="Recebido! Estou transcrevendo seu áudio, isso pode levar alguns instantes..."
-            )
-            
             # Transcrever o áudio
             transcription = self.transcribe_audio(audio_id, service)
-            
-            # Enviar a transcrição de volta para o usuário
-            if transcription:
-                self.send_text_message(
-                    to=wa_id,
-                    message=f"📝 *Transcrição do áudio:*\n\n{transcription}"
-                )
-            else:
-                self.send_text_message(
-                    to=wa_id,
-                    message="Não foi possível transcrever o áudio. Por favor, verifique se o áudio contém fala clara e tente novamente."
-                )
+            return transcription
                 
         except Exception as e:
             logger.error(f"Erro ao processar mensagem de áudio: {str(e)}")

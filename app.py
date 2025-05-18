@@ -9,7 +9,7 @@ from utils import normalize_brazilian_phone
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-import examples
+import agent
 
 app = Flask(__name__)
 
@@ -103,16 +103,12 @@ def process_message(message, contacts):
         if message_type == "text":
             text = message.get("text", {}).get("body", "")
             logger.info(f"Mensagem de texto: {text}")
-            whatsapp_client.send_text_message(
-                to=normalized_wa_id,
-                message="Ok, mensagem de texto recebida e processada"
-            )
-            #examples.run()
-                
+            agent.process_user_input(text, normalized_wa_id)
+
         elif message_type == "audio":
             logger.info("Áudio recebido")
-            whatsapp_client.process_audio_message(message, normalized_wa_id)
-            # Processar áudio
+            transcription = whatsapp_client.process_audio_message(message, normalized_wa_id)
+            agent.process_user_input(text, normalized_wa_id)
         
         #elif message_type == "image":
             # logger.info("Imagem recebida")

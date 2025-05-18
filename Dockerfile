@@ -15,8 +15,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copiar o código da aplicação
 COPY app.py .
 COPY whatsapp_client.py .
-COPY examples.py .
 COPY utils.py .
+COPY agent.py .
 
 # Expor a porta
 EXPOSE 5000
