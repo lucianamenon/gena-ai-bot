@@ -1,19 +1,6 @@
-Claro! Aqui está o conteúdo completo do README em formato Markdown para você copiar e salvar como um arquivo `README.md`:
-
-```markdown
 # 🤖 GENA - Assistente Virtual WhatsApp
 
-![Version](https://img.shields.io/badge/versão-1.0.0-blue)
-![Python](https://img.shields.io/badge/Python-3.11-green)
-![Docker](https://img.shields.io/badge/Docker-Compatível-blue)
-![WhatsApp](https://img.shields.io/badge/WhatsApp-Business%20API-green)
-![Gemini](https://img.shields.io/badge/Gemini-AI-purple)
-
-Um assistente virtual inteligente para a Clínica Essenza, que utiliza a API do WhatsApp Business e o Gemini AI para oferecer atendimento automatizado, responder dúvidas sobre procedimentos estéticos, auxiliar em agendamentos e muito mais.
-
-<p align="center">
-  <img src="https://i.imgur.com/placeholder.jpg" alt="Clínica Essenza Logo" width="450">
-</p>
+Um assistente virtual inteligente que utiliza a API do WhatsApp Business e o Gemini AI para oferecer atendimento automatizado, responder dúvidas sobre os procedimentos da sua clínica, auxiliar em agendamentos e muito mais.
 
 ## 📋 Índice
 
@@ -31,7 +18,7 @@ Um assistente virtual inteligente para a Clínica Essenza, que utiliza a API do 
 
 ## 🌟 Visão Geral
 
-O **Assistente Virtual da Clínica Essenza** é uma solução completa para automatizar o atendimento ao cliente via WhatsApp. Utilizando o poder do Gemini AI para processamento de linguagem natural, o assistente pode entender as intenções dos clientes, fornecer informações sobre procedimentos estéticos, auxiliar em agendamentos e muito mais.
+O **Assistente Virtual GENA** é uma solução completa para automatizar o atendimento ao cliente via WhatsApp. Utilizando o poder do Gemini AI para processamento de linguagem natural, o assistente pode entender as intenções dos clientes via áudio e texto, fornecer informações sobre procedimentos, auxiliar em agendamentos e muito mais.
 
 O sistema funciona como um webhook que recebe mensagens do WhatsApp, processa as intenções do usuário com o Gemini AI e executa as operações correspondentes, como enviar informações sobre procedimentos, compartilhar a localização da clínica ou auxiliar em agendamentos.
 
@@ -65,25 +52,20 @@ O sistema é composto por quatro componentes principais:
 3. **Cliente WhatsApp** (`whatsapp_client.py`) - Gerencia a comunicação com a API do WhatsApp
 4. **Utilitários** (`utils.py`) - Funções auxiliares, como normalização de números de telefone
 
-<p align="center">
-  <img src="https://i.imgur.com/placeholder2.jpg" alt="Arquitetura" width="600">
-</p>
-
 ## 📋 Pré-requisitos
 
 - Python 3.11 ou superior
 - Docker e Docker Compose (opcional, para containerização)
 - Conta no WhatsApp Business API
 - Acesso ao Gemini AI (API Key)
-- Servidor com HTTPS para receber webhooks
 
 ## 🔧 Configuração
 
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/sua-organizacao/clinica-essenza-whatsapp.git
-cd clinica-essenza-whatsapp
+git clone https://github.com/lucianamenon/gena-ai-bot.git
+cd gena-ai-bot
 ```
 
 ### 2. Configure as variáveis de ambiente
